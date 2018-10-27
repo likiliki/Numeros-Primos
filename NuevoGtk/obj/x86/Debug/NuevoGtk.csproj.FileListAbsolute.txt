@@ -1,0 +1,6 @@
+/home/liki/proyectos/newgtkweb/NuevoGtk/NuevoGtk/obj/x86/Debug/NuevoGtk.csproj.CoreCompileInputs.cache
+/home/liki/proyectos/newgtkweb/NuevoGtk/NuevoGtk/bin/Debug/NuevoGtk.exe
+/home/liki/proyectos/newgtkweb/NuevoGtk/NuevoGtk/bin/Debug/NuevoGtk.pdb
+/home/liki/proyectos/newgtkweb/NuevoGtk/NuevoGtk/obj/x86/Debug/NuevoGtk.exe
+/home/liki/proyectos/newgtkweb/NuevoGtk/NuevoGtk/obj/x86/Debug/NuevoGtk.pdb
+/home/liki/proyectos/newgtkweb/NuevoGtk/NuevoGtk/obj/x86/Debug/NuevoGtk.csprojAssemblyReference.cache
