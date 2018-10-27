@@ -33,10 +33,10 @@ public partial class MainWindow : Gtk.Window
         int ini = min;
         int fin = max;
         int linea = 6;
-        if (ini > 0 && max > 0 && max > ini)
+        if (ini > 0 && fin > 0 && fin > ini)
         {
             int lin = 1;
-            for (int i = ini; i <= max; i++)
+            for (int i = ini; i <= fin; i++)
             {
                  Console.Write(i.ToString());
                 if (EsPrimo(i))
@@ -56,6 +56,7 @@ public partial class MainWindow : Gtk.Window
             }
             fullText += "\n";
         }
+        textview1.Buffer.Text = fullText;
     }
 
     public bool EsPrimo(int num)
@@ -67,7 +68,6 @@ public partial class MainWindow : Gtk.Window
                 return false;
             }
         }
-
         return true;
     }
 
@@ -81,14 +81,36 @@ public partial class MainWindow : Gtk.Window
             num = Int32.Parse(entry1.Text);
             Primos(1, num);
         }
-        catch
+        catch (FormatException ex)
         {
-            Console.WriteLine("Exception: num = Int32.Parse(entry1.Text);");
+            fullText = "\n";
+            fullText += ex.Message + "\n\nIntroduzca solo numeros enteros.";
+            textview1.Buffer.Text = fullText;
         }
-        textview1.Buffer.Text = fullText;
+        catch (Exception ex)
+        {
+            fullText = "\n";
+            fullText += ex.Message + "\n\nFallo en la Aplicacion.";
+            textview1.Buffer.Text = fullText;
+        }
     }
 
     protected void OnButton2Clicked(object sender, EventArgs e)
     {
+        Console.WriteLine("OnButton2Clicked(object sender, EventArgs e)");
+
+        int minimo = 0;
+        int maximo = 0;
+
+        try
+        {
+            minimo = Int32.Parse(entryMin.Text);
+            maximo = Int32.Parse(entryMax.Text);
+            Primos(minimo, maximo);
+        }
+        catch
+        {
+            Console.WriteLine("minimo = Int32.Parse(entryMin.Text);\nmaximo = Int32.Parse(entryMax.Text);");
+        }
     }
 }

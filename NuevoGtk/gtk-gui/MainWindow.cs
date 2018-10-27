@@ -21,11 +21,11 @@ public partial class MainWindow
 
 	private global::Gtk.Label label3;
 
-	private global::Gtk.Entry entry2;
+	private global::Gtk.Entry entryMin;
 
 	private global::Gtk.Label label4;
 
-	private global::Gtk.Entry entry3;
+	private global::Gtk.Entry entryMax;
 
 	private global::Gtk.Button button2;
 
@@ -97,6 +97,7 @@ public partial class MainWindow
 		w5.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.hbox2 = new global::Gtk.HBox();
+		this.hbox2.Name = "hbox2";
 		this.hbox2.Spacing = 6;
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.label5 = new global::Gtk.Label();
@@ -108,7 +109,7 @@ public partial class MainWindow
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.label3 = new global::Gtk.Label();
 		this.label3.Name = "label3";
-		this.label3.LabelProp = global::Mono.Unix.Catalog.GetString("label1");
+		this.label3.LabelProp = global::Mono.Unix.Catalog.GetString("Entre");
 		this.label3.Justify = ((global::Gtk.Justification)(1));
 		this.hbox2.Add(this.label3);
 		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.label3]));
@@ -116,32 +117,32 @@ public partial class MainWindow
 		w7.Expand = false;
 		w7.Fill = false;
 		// Container child hbox2.Gtk.Box+BoxChild
-		this.entry2 = new global::Gtk.Entry();
-		this.entry2.CanFocus = true;
-		this.entry2.Name = "entry2";
-		this.entry2.IsEditable = true;
-		this.entry2.InvisibleChar = '●';
-		this.hbox2.Add(this.entry2);
-		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.entry2]));
+		this.entryMin = new global::Gtk.Entry();
+		this.entryMin.CanFocus = true;
+		this.entryMin.Name = "entryMin";
+		this.entryMin.IsEditable = true;
+		this.entryMin.InvisibleChar = '●';
+		this.hbox2.Add(this.entryMin);
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.entryMin]));
 		w8.Position = 2;
 		w8.Expand = false;
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.label4 = new global::Gtk.Label();
 		this.label4.Name = "label4";
-		this.label4.LabelProp = global::Mono.Unix.Catalog.GetString("label1");
+		this.label4.LabelProp = global::Mono.Unix.Catalog.GetString("y");
 		this.hbox2.Add(this.label4);
 		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.label4]));
 		w9.Position = 3;
 		w9.Expand = false;
 		w9.Fill = false;
 		// Container child hbox2.Gtk.Box+BoxChild
-		this.entry3 = new global::Gtk.Entry();
-		this.entry3.CanFocus = true;
-		this.entry3.Name = "entry3";
-		this.entry3.IsEditable = true;
-		this.entry3.InvisibleChar = '●';
-		this.hbox2.Add(this.entry3);
-		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.entry3]));
+		this.entryMax = new global::Gtk.Entry();
+		this.entryMax.CanFocus = true;
+		this.entryMax.Name = "entryMax";
+		this.entryMax.IsEditable = true;
+		this.entryMax.InvisibleChar = '●';
+		this.hbox2.Add(this.entryMax);
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.entryMax]));
 		w10.Position = 4;
 		w10.Expand = false;
 		// Container child hbox2.Gtk.Box+BoxChild
@@ -149,7 +150,7 @@ public partial class MainWindow
 		this.button2.CanFocus = true;
 		this.button2.Name = "button2";
 		this.button2.UseUnderline = true;
-		this.button2.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.button2.Label = global::Mono.Unix.Catalog.GetString("Generar");
 		this.hbox2.Add(this.button2);
 		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.button2]));
 		w11.Position = 5;
@@ -192,5 +193,6 @@ public partial class MainWindow
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.button1.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
+		this.button2.Clicked += new global::System.EventHandler(this.OnButton2Clicked);
 	}
 }
